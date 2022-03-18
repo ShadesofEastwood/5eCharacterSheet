@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="menu">
+        <h1>Shattered Isles</h1>
+        <div class="menuButton"><button id="mycharactersButton" class="menubuttonStyle">My Characters</button></div>
+        <div class="menuButton"><button id="mapsButton" class="menubuttonStyle">Maps</button></div>
+        <div class="menuButton"><button id="npcsButton" class="menubuttonStyle">NPC's</button></div>
+        <div class="menuButton"><button id="notesButton" class="menubuttonStyle">Notes</button></div>
+    </div>
+    <div id="modal1">
+        
+        <div id="modal1-content">
+            <button id="characterPage">Character</button>
+            <button>Description</button>
+            <button id="spellsPage">Spells</button>
+
+            <div class="row1">
+
+
+
+                <div id="characterName">
+                    <div id="characterNameTitle">Character Name:</div>
+                    <div id="characterNameFinal"></div>
+                    <div id="characterNameInput">
+                        <input  id="characterNameInputBox">
+                    </div>
+                </div>
+
+
+
+                <div id="classAndLevel"> 
+                    <div id="classAndLevelTitle">Class and Level:</div>
+
+                    <div id="classDropDown">
+                        <select id="classDropDownInput">
+                            <option value="none">undefined</option>
+                            <option value="artificer">Artificer</option>
+                            <option value="barbarian">Barbarian</option>
+                            <option value="bard">Bard</option>
+                            <option value="bloodHunter">Blood Hunter</option>
+                            <option value="cleric">Cleric</option>
+                            <option value="druid">Druid</option>
+                            <option value="fighter">Fighter</option>
+                            <option value="monk">Monk</option>
+                            <option value="paladin">Paladin</option>
+                            <option value="ranger">Ranger</option>
+                            <option value="rogue">Rogue</option>
+                            <option value="sorcerer">Sorcerer</option>
+                            <option value="warlock">Warlock</option>
+                            <option value="wizard">Wizard</option>
+                            <option value="multiclass">Multiclass</option>
+
+                        </select>
+                    </div>
+                    <div id="firstLevelNum">
+
+                    </div>
+                    <div id="levelNumber">
+                        <input id="levelNumInput" type="text" style="width: 24px;display: none;">
+                    </div>
+                </div>
+
+
+                <div id="background">
+                    <div id="backgroundTitle">Background:</div>
+                    <div id="backgroundDropDown">
+                        <select id="backgroundDropDownInput">
+                            <option value="none">undefined</option>
+                            <option value="acolyte">Acolyte</option>
+                            <option value="athlete">Athlete</option>
+                            <option value="charlatan">Charlatan</option>
+                            <option value="criminal">Criminal</option>   
+                            <option value="entertainer">Entertainer</option> 
+                            <option value="folkHero">Folk Hero</option>
+                            <option value="guildArtisan">Guild Artisan</option>
+                            <option value="hermit">Hermit</option>
+                            <option value="noble">Noble</option>
+                            <option value="outlander">Outlander</option>
+                            <option value="sailor">Sailor</option>
+                            <option value="soldier">Soldier</option>
+                            <option value="urchin">Urchin</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="characterRace">
+                    <div id="characterRaceTitle">Race:</div>
+                    <div id="characterRaceDropDown">
+
+                        <select id="characterRaceDropDownInput">
+                            <option value="none">undefined</option>
+                            <option value="dragonBorn">Dragonborn</option>
+                            <option value="dwarf">Dwarf</option>
+                            <option value="elf">Elf</option>
+                            <option value="gnome">Gnome</option>   
+                            <option value="halfElf">Half-Elf</option> 
+                            <option value="halfling">Halfling</option>
+                            <option value="halfOrc">Half-Orc</option>
+                            <option value="human">Human</option>
+                            <option value="tiefling">Tiefling</option>
+                       
+                        </select>
+
+                    </div>
+                </div>
+                <div id="alignment">
+                    <div id="alignmentTitle">Alignment</div>
+                    <div id="alignmentDropDown">
+
+                        <select id="alignmentDropDownInput">
+                            <option value="none">undefined</option>
+                            <option value="LG">Lawful Good</option>
+                            <option value="NG">Neutral Good</option>
+                            <option value="CG">Chaotic Good</option>
+                            <option value="LN">Lawful Neutral</option>   
+                            <option value="TN">True Neutral</option> 
+                            <option value="CN">Chaotic Neutral</option>
+                            <option value="LE">Lawful Evil</option>
+                            <option value="NE">Neutral Evil</option>
+                            <option value="CE">Chaotic Neutral</option>
+                       
+                        </select>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="column1">
+                <div class="abilitiesContainer">
+                    <div id="abilityScoresContainer">
+                        <div id="abilityScoresTitle">Ability Scores</div>
+                        <div id="strAbilityScore">
+                            <div>STR</div>
+                            <div id="strScoreContainer" class="abilityScore">
+                                <div id="strScoreInputContainer">
+                                    <input id="strScoreInput" style="width: 18px; height: 24px;">
+                                </div>
+                                <div id="strScoreNum">10</div>
+                            </div>
+                            
+                            <div id="strMod">+0</div>
+                        </div>
+
+                        <div id="dexAbilityScore">
+                            <div>DEX</div>
+                            <div id="dexScoreContainer" class="abilityScore">
+                                <div id="dexScoreInputContainer">
+                                    <input id="dexScoreInput" style="width: 18px; height: 24px;">
+                                </div>
+                                <div id="dexScoreNum">10</div>
+                            </div>
+                            
+                            <div id="dexMod">+0</div>
+                        </div>
+
+                        <div id="conAbilityScore">
+                            <div>CON</div>
+                            <div id="conScoreContainer" class="abilityScore">
+                                <div id="conScoreInputContainer">
+                                    <input id="conScoreInput" style="width: 18px; height: 24px;">
+                                </div>
+                                <div id="conScoreNum">10</div>
+                            </div>
+                            
+                            <div id="conMod">+0</div>
+                        </div>
+
+                        <div id="intAbilityScore">
+                            <div>INT</div>
+                            <div id="intScoreContainer" class="abilityScore">
+                                <div id="intScoreInputContainer">
+                                    <input id="intScoreInput" style="width: 18px; height: 24px;">
+                                </div>
+                                <div id="intScoreNum">10</div>
+                            </div>
+                            
+                            <div id="intMod">+0</div>
+                        </div>
+
+                        <div id="wisAbilityScore">
+                            <div>WIS</div>
+                            <div id="wisScoreContainer" class="abilityScore">
+                                <div id="wisScoreInputContainer">
+                                    <input id="wisScoreInput" style="width: 18px; height: 24px;">
+                                </div>
+                                <div id="wisScoreNum">10</div>
+                            </div>
+                            
+                            <div id="wisMod">+0</div>
+                        </div>
+
+                        <div id="chaAbilityScore">
+                            <div>CHA</div>
+                            <div id="chaScoreContainer" class="abilityScore">
+                                <div id="chaScoreInputContainer">
+                                    <input id="chaScoreInput" style="width: 18px; height: 24px;">
+                                </div>
+                                <div id="chaScoreNum">10</div>
+                            </div>
+                            
+                            <div id="chaMod">+0</div>
+                        </div>
+
+                    </div>
+                    <div id="savingThrowsContainer">
+                        <div>Saving Throws</div>
+
+                        <div class="savingThrowBox">
+                            <div class="savingThrowCheckBox">
+                                <input id="strSaveCheckbox" type="checkbox">
+                            </div>
+                            <div id="strSaveTitle" class="savingThrowTitle">STR</div>
+                            <div id="strSaveBonus" class="savingThrowBonus">+0</div>
+                        </div>
+
+                        <div class="savingThrowBox">
+                            <div class="savingThrowCheckBox">
+                                <input id="dexSaveCheckbox" type="checkbox">
+                            </div>
+                            <div id="dexSaveTitle" class="savingThrowTitle">DEX</div>
+                            <div id="dexSaveBonus" class="savingThrowBonus">+0</div>
+                        </div>
+                        <div class="savingThrowBox">
+                            <div class="savingThrowCheckBox">
+                                <input id="conSaveCheckbox" type="checkbox">
+                            </div>
+                            <div id="conSaveTitle" class="savingThrowTitle">CON</div>
+                            <div id="conSaveBonus" class="savingThrowBonus">+0</div>
+                        </div>
+                        <div class="savingThrowBox">
+                            <div class="savingThrowCheckBox">
+                                <input id="intSaveCheckbox" type="checkbox">
+                            </div>
+                            <div id="intSaveTitle" class="savingThrowTitle">INT</div>
+                            <div id="intSaveBonus" class="savingThrowBonus">+0</div>
+                        </div>
+                        <div class="savingThrowBox">
+                            <div class="savingThrowCheckBox">
+                                <input id="wisSaveCheckbox" type="checkbox">
+                            </div>
+                            <div id="wisSaveTitle" class="savingThrowTitle">WIS</div>
+                            <div id="wisSaveBonus" class="savingThrowBonus">+0</div>
+                        </div>
+                        <div class="savingThrowBox">
+                            <div class="savingThrowCheckBox">
+                                <input id="chaSaveCheckbox" type="checkbox">
+                            </div>
+                            <div id="chaSaveTitle" class="savingThrowTitle">CHA</div>
+                            <div id="chaSaveBonus" class="savingThrowBonus">+0</div>
+                        </div>
+                        
+                    </div>
+                    <div id="proficiencyBonusContainer">
+                        <div>Proficiency Bonus:</div>
+                        <div id="profBonus">(+0)</div>
+                    </div>
+                    <div id="skillsListContainer">
+                        <div id="skillsListTitle">Skills:</div>
+                        <div id="acrobaticsSkillBox" class="skillBox">
+                            <div class="skillCheckBox">
+                                <input type="checkbox" id="acrobatics">
+                            </div>
+                            <div class="skillTitle">Acrobatics</div>
+                            <div class="skillBonus" id="acrBonus">+0</div>
+                        </div>
+                        <div id="animalHandlingSkillBox" class="skillBox">
+                            <div class="skillCheckBox">
+                                <input type="checkbox" id="animalHandling">
+                            </div>
+                            <div class="skillTitle">Animal Handling</div>
+                            <div class="skillBonus" id="aniBonus">+0</div>
+                        </div>
+                        <div id="arcanaSkillBox" class="skillBox">
+                            <div class="skillCheckBox">
+                                <input type="checkbox" id="arcana">
+                            </div>
+                            <div class="skillTitle">Arcana</div>
+                            <div class="skillBonus" id="arcBonus">+0</div>
+                        </div>
+                        <div id="athleticsSkillBox" class="skillBox">
+                            <div class="skillCheckBox">
+                                <input type="checkbox" id="athletics">
+                            </div>
+                            <div class="skillTitle">Athletics</div>
+                            <div class="skillBonus" id="athBonus">+0</div>
+                        </div>
+                        <div id="deceptionSkillBox" class="skillBox">
+                            <div class="skillCheckBox">
+                                <input type="checkbox" id="deception">
+                            </div>
+                            <div class="skillTitle">Deception</div>
+                            <div class="skillBonus" id="decBonus">+0</div>
+                        </div>
+                        <div id="historySkillBox" class="skillBox">
+                            <div class="skillCheckBox">
+                                <input type="checkbox" id="history">
+                            </div>
+                            <div class="skillTitle">History</div>
+                            <div class="skillBonus" id="hisBonus">+0</div>
+                        </div>
+                        <div id="insightSkillBox" class="skillBox">
+                            <div class="skillCheckBox">
+                                <input type="checkbox" id="insight">
+                            </div>
+                            <div class="skillTitle">Insight</div>
+                            <div class="skillBonus" id="insBonus">+0</div>
+                        </div>
+                        <div id="intimidationSkillBox" class="skillBox">
+                            <div class="skillCheckBox">
+                                <input type="checkbox" id="intimidation">
+                            </div>
+                            <div class="skillTitle">Intimidation</div>
+                            <div class="skillBonus" id="intiBonus">+0</div>
+                        </div>
+                        <div id="investigationSkillBox" class="skillBox">
+                            <div class="skillCheckBox">
+                                <input type="checkbox" id="investigation">
+                            </div>
+                            <div class="skillTitle">Investigation</div>
+                            <div class="skillBonus" id="invBonus">+0</div>
+                        </div>
+                        <div id="medicineSkillBox" class="skillBox">
+                            <div class="skillCheckBox">
+                                <input type="checkbox" id="medicine">
+                            </div>
+                            <div class="skillTitle">Medicine</div>
+                            <div class="skillBonus" id="medBonus">+0</div>
+                        </div>
+                        <div id="natureSkillBox" class="skillBox">
+                            <div class="skillCheckBox">
+                                <input type="checkbox" id="nature">
+                            </div>
+                            <div class="skillTitle">Nature</div>
+                            <div class="skillBonus" id="natBonus">+0</div>
+                        </div>
+                        <div id="perceptionSkillBox" class="skillBox">
+                            <div class="skillCheckBox">
+                                <input type="checkbox" id="perception">
+                            </div>
+                            <div class="skillTitle">Perception</div>
+                            <div class="skillBonus" id="percBonus">+0</div>
+                        </div>
+                        <div id="performanceSkillBox" class="skillBox">
+                            <div class="skillCheckBox">
+                                <input type="checkbox" id="performance">
+                            </div>
+                            <div class="skillTitle">Performance</div>
+                            <div class="skillBonus" id="perfBonus">+0</div>
+                        </div>
+                        <div id="persuasionSkillBox" class="skillBox">
+                            <div class="skillCheckBox">
+                                <input type="checkbox" id="persuasion">
+                            </div>
+                            <div class="skillTitle">Persuasion</div>
+                            <div class="skillBonus" id="persBonus">+0</div>
+                        </div>
+                        <div id="religionSkillBox" class="skillBox">
+                            <div class="skillCheckBox">
+                                <input type="checkbox" id="religion">
+                            </div>
+                            <div class="skillTitle">Religion</div>
+                            <div class="skillBonus" id="relBonus">+0</div>
+                        </div>
+                        <div id="sleightOfHandSkillBox" class="skillBox">
+                            <div class="skillCheckBox">
+                                <input type="checkbox" id="sleightOfHand">
+                            </div>
+                            <div class="skillTitle">Sleight of Hand</div>
+                            <div class="skillBonus" id="sleBonus">+0</div>
+                        </div>
+                        <div id="stealthSkillBox" class="skillBox">
+                            <div class="skillCheckBox">
+                                <input type="checkbox" id="stealth">
+                            </div>
+                            <div class="skillTitle">Stealth</div>
+                            <div class="skillBonus" id="steBonus">+0</div>
+                        </div>
+                        <div id="survivalSkillBox" class="skillBox">
+                            <div class="skillCheckBox">
+                                <input type="checkbox" id="survival">
+                            </div>
+                            <div class="skillTitle">Survival</div>
+                            <div class="skillBonus" id="surBonus">+0</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="passiveContainer">Passive Perception: +0</div>
+
+                <div class="proficiencyContainer">
+                    <div>Proficiencies and Languages:</div>
+                    <div id="newProfInputWrapper" style="display: none;">
+                        <textarea id="newProfText" style="width:90%;height:4em;"></textarea>
+                    </div>
+                    <div>
+                        <button id="newProf">Add</button>
+                    </div>
+                    <div id="profParent">
+
+                    </div>
+                   
+
+                </div>
+
+            </div>
+
+
+            <div class="column2">
+                <div class="healthContainer">
+                    <div id="armorClass">
+                        <div>Armor Class</div>
+                        <div id="acNumberBox">10</div>
+                        <div style="position: relative;display: flex;flex-flow: column wrap;align-items: center;">
+                            <input id="acInput" style="width:35px;height:35px;display:none">
+                        </div>
+                    </div>
+                    <div id="initiative">
+                        <div>Initiative</div>
+                        <div id="characterInitiative">+0</div>
+                    </div>
+                    <div id="speed">
+                        <div>Speed</div>
+                        <div id="speedNumberBox">0</div>
+                        <div style="position: relative;display: flex;flex-flow: column wrap;align-items: center;">
+                            <input id="speedInput" style="width:35px;height:35px;display:none">
+                        </div>
+                    </div>
+                    <div id="hitPoints">
+                        <div>Hit Points</div>
+                        <div id="hitPointsTotalNumberBox">0</div>
+                        <div style="position: relative;display: flex;flex-flow: column wrap;align-items: center;">
+                            <input id="hitPointsTotalInput" style="width:35px;height:35px;display:none">
+                        </div>
+                        <div>/</div>
+                        <div id="hitPointsNumberBox">0</div>
+                        <div style="position: relative;display: flex;flex-flow: column wrap;align-items: center;">
+                            <input id="hitPointsInput" style="width:35px;height:35px;display:none">
+                        </div>
+                       
+                    </div>
+                    <div id="tempHitPoints">
+                        <div>Temporary Hit Points</div>
+                        <div id="tempHitPointsNumberBox">0</div>
+                        <div style="position: relative;display: flex;flex-flow: column wrap;align-items: center;">
+                            <input id="tempHitPointsInput" style="width:35px;height:35px;display:none">
+                        </div>
+                    </div>
+                    <div id="hitDice">
+                        <div>Hit Dice</div>
+                        <div id="hitDiceNumberBox">0</div>
+                        <div style="position: relative;display: flex;flex-flow: column wrap;align-items: center;">
+                            <input id="hitDiceInput" style="width:35px;height:35px;display:none">
+                        </div>
+                        <div>/</div>
+                        <div id="hitDiceTotalNumberBox">0</div>
+                        <div style="position: relative;display: flex;flex-flow: column wrap;align-items: center;">
+                            <input id="hitDiceTotalInput" style="width:35px;height:35px;display:none">
+                        </div>
+                    </div>
+                    <div id="deathSaves">
+                        <div style="font-size: 1em;">Death Saves</div>
+                        <div>Successes</div>
+                        <div>
+                            <input type="checkbox">
+                            <input type="checkbox">
+                            <input type="checkbox">
+                        </div>
+                        <div>Failures</div>
+                        <div>
+                            <input type="checkbox">
+                            <input type="checkbox">
+                            <input type="checkbox">
+                        </div>
+                    </div>
+                </div>
+                <div class="attackContainer" style="padding: 1em;">
+                   <div>Attack List</div>
+                        <div style="text-align: left;">
+                            <button id="addAttack">Add</button>
+                        </div>
+                   <div id="attackInputContainer" style="display: none; text-align: left;">
+                        <select id="attackSelect">
+                            <option value="none">Ability</option>
+                            <option value="strAttack" id="strAttack">STR</option>
+                            <option value="dexAttack" id="dexAttack">DEX</option>
+                            <option value="conAttack" id="conAttack">CON</option>
+                            <option value="intAttack" id="intAttack">INT</option>
+                            <option value="wisAttack" id="wisAttack">WIS</option>
+                            <option value="chaAttack" id="chaAttack">CHA</option>
+                        </select>
+                        <select id="damageSelect">
+                            <option value="none">Damage</option>
+                            <option value="acid">Acid</option>
+                            <option value="bludgeoning">Bludgeoning</option>
+                            <option value="cold">Cold</option>
+                            <option value="fire">Fire</option>
+                            <option value="force">Force</option>
+                            <option value="lightning">Lightning</option>
+                            <option value="necrotic">Necrotic</option>
+                            <option value="piercing">Piercing</option>
+                            <option value="poison">Poison</option>
+                            <option value="psychic">Psychic</option>
+                            <option value="radiant">Radiant</option>
+                            <option value="slashing">Slashing</option>
+                            <option value="thunder">Thunder</option>
+                        </select>
+                        <input id="diceInput" style="width:20%">
+                        <input id="attackInput" style="width:100%">
+                        <button id="doneAddAttack">Done</button>
+                   </div>
+                    <div id="attackListContainer">
+                            <div id="attackParent" style="text-align: left;">
+
+                            </div>
+                            <div id="attackOutputParent">
+ 
+                        </div>
+                        <div id="diceParent">
+
+                        </div>
+                        <div id="damageTypeParent">
+
+                        </div>
+                   </div>
+                   
+                
+                </div>
+                <div class="equipmentContainer" style="padding: 1em;">
+                    <div>Equipment</div>
+                    <div style="text-align: left;">
+                        <button id="addEquip">Add</button>
+                    </div>
+                    <div id="equipInputWrapper" style="display: none;text-align: left;">
+                        <input id="equipInput" style="width: 90%;">
+                    </div>
+                    <div id="equipList" style="text-align: left;"></div>
+                    </div>
+            </div>
+
+
+
+            <div class="column3">
+                <div class="featuresTraits">
+                    <div>Features and Traits</div>
+                    <div id="newFeatureTitleInputWrapper" style="display:none;">
+                        <input id="newFeatureTitleText" style="width:90%">
+                    </div>
+                    <div id="newFeatureInputWrapper" style="display: none;">
+                        <textarea id="newFeatureText" style="width:90%;height:16em;"></textarea>
+                    </div>
+                    <div>
+                        <button id="newFeature">Add</button>
+                    </div>
+                    <div id="featureParent" style="text-align: left;">
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="featuresColumn1" style="display: none;">Features
+                <div id="features1" style="text-align: left;"></div>
+            </div>
+            <div id="featuresColumn2"  style="display: none;">Features
+                <div id="features2" style="text-align: left;"></div>
+            </div>
+            <div id="featuresColumn3"  style="display: none;">Features
+                <div id="features3" style="text-align: left;"></div>
+            </div>
+    </div>
+</div>
+
+<div id="modal2" style="display: none;">
+        <div id="modal2-content">
+            <div id="spellsHeader">
+                <div id="spellsClass">Class</div>
+                <div id="spellsAbility">Ability</div>
+                <div id="spellsDC">DC</div>
+                <div id="spellsBonus">Bonus</div>
+            </div>
+            <div id="spellsColumn1">Column1</div>
+            <div id="spellsColumn2">Column2</div>
+            <div id="spellsColumn3">Column3</div>
+      
+
+        </div>
+</div>
+  
+  
+   
+
+
+    <script src="app.js"></script>
+</body>
+</html>

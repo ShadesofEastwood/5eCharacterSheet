@@ -1,0 +1,639 @@
+h1 {
+    color: black;
+}
+
+body {
+    background-color: #cccccc;
+    background-image: url(images/backgroundImage.jpg);
+    background-size: 100%;
+    background-repeat:repeat;
+    display: grid;
+}
+
+#menu {
+    background-color:darkorange;
+    position: fixed;
+    height: 100%;
+    width: 20%;
+    border-radius: 2em;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    border-style:groove;
+    border-width: 1em;
+    text-align: center;
+}
+
+.menuButton {
+    color: black;
+    text-align: center;
+    margin-top: 10%;
+}
+
+
+.menubuttonStyle {
+    font-size: 1em;
+    font-family:Impact;
+    color:black;
+    background-color:darkgoldenrod;
+    width: 100%;
+    height: 3em;
+}
+
+.menubuttonStyle:hover {
+    font-size: 1em;
+    width: 120%;
+    text-align: right;
+}
+
+#modal1 {
+display: none; 
+position: fixed;
+z-index: 1;
+left: 0;
+top: 0;
+width: 100%; 
+height: 100%; 
+overflow: auto;
+background-color: rgb(0,0,0); 
+background-color: rgba(0,0,0,0.4);
+font-family: 'Courier New', Courier, monospace;
+}
+
+#modal1-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 1em;
+    border: 1em solid #888;
+    width: 95%;
+    height:80em;
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   border-radius: 2em;
+   grid-row: auto;
+   grid-column: auto;
+   font-family: 'Courier New', Courier, monospace;
+   text-align: center;
+   overflow: auto;
+}
+
+.row1 {
+    grid-column: span 3/3;
+    border-style: solid;
+    display: grid;
+    grid-template-columns: 3;
+    grid-template-rows: 2;
+    border-radius: 1em;
+}
+
+#characterName {
+    background-color: #cccccc;
+    margin: 1%;
+    border-radius: 1em;
+    grid-column: span 1/1;
+    grid-row: span 1/2;
+    display:grid;
+    padding: 1em;
+}
+
+
+#characterNameTitle {
+    grid-column: span 1/1;
+}
+
+#characterNameFinal {
+    grid-column: span 1/2;
+    grid-row: 1/1;
+}
+
+#characterNameInput {
+    grid-column: span 1/2;
+    grid-row: 1/1;
+    display: none;
+}
+
+#classAndLevel {
+    background-color: #cccccc;
+    margin: 1%;
+    border-radius: 1em;
+    grid-column: span 1/2;
+    grid-row: span 1/2;
+    display: grid;
+    padding: 1em;
+}
+
+#classAndLevelTitle {
+    grid-column: span 1/1;
+}
+
+#classDropDown {
+    grid-column: span 1/2;
+    grid-row: 1/1;
+}
+
+#firstLevelNum {
+    grid-column: span 1/3;
+    grid-row: 1/1;
+}
+
+#levelNumber{
+    grid-column: span 1/4;
+    grid-row: 1/1;
+}
+
+#background {
+    background-color: #cccccc;
+    margin: 1%;
+    border-radius: 1em;
+    grid-column: span 1/1;
+    display: grid;
+    padding: 1em;
+}
+
+#backgroundTitle {
+    grid-column: span 1/1;
+}
+
+#backgroundDropDown {
+    grid-column: span 1/2;
+    grid-row: 1/1;
+}
+
+#characterRace {
+    background-color: #cccccc;
+    margin: 1%;
+    border-radius: 1em;
+    padding: 1em;
+    display: grid;
+}
+
+#characterRaceTitle {
+    grid-column: span 1/1;
+}
+
+#characterRaceDropDown {
+    grid-column: span 1/2;
+    grid-row: 1/1;
+}
+
+
+#alignment {
+    background-color: #cccccc;
+    margin: 1%;
+    border-radius: 1em;
+    padding: 1em;
+    display: grid;
+}
+
+#alignmentTitle {
+    grid-column: span 1/1;
+}
+
+#alignmentDropDown {
+    grid-column: span 1/2;
+    grid-row: 1/1;
+}
+
+
+.column1 {
+    grid-column: span 1/1;
+    border-style: solid;
+    margin: 1%;
+    display: grid;
+    border-radius: 1em;
+    width: 26em;
+}
+
+.abilitiesContainer {
+    display: grid;
+    grid-template-columns: 6;
+    margin: 1%;
+}
+
+#abilityScoresContainer {
+    background-color: #cccccc;
+    grid-column: span 2/2;
+    grid-row: span 8/8;
+    margin: 1%;
+    border-radius: 1em;
+}
+
+.abilityScore {
+    background-color: #cccccc;
+}
+
+#strAbilityScore {
+    background-color: white;
+    font-size: 2em;
+    margin: 2%;
+    border-radius: 1em;
+}
+
+#strScoreInputContainer {
+    display: none;
+}
+
+#dexAbilityScore {
+    background-color: white;
+    font-size: 2em;
+    margin: 2%;
+    border-radius: 1em;
+}
+
+#dexScoreInputContainer {
+    display: none;
+}
+
+#conAbilityScore {
+    background-color: white;
+    font-size: 2em;
+    margin: 2%;
+    border-radius: 1em;
+}
+
+#conScoreInputContainer {
+    display: none;
+}
+
+#intAbilityScore {
+    background-color: white;
+    font-size: 2em;
+    margin: 2%;
+    border-radius: 1em;
+}
+
+#intScoreInputContainer {
+    display: none;
+}
+
+#wisAbilityScore {
+    background-color: white;
+    font-size: 2em;
+    margin: 2%;
+    border-radius: 1em;
+}
+
+#wisScoreInputContainer {
+    display: none;
+}
+
+#chaAbilityScore {
+    background-color: white;
+    font-size: 2em;
+    margin: 2%;
+    border-radius: 1em;
+}
+
+#chaScoreInputContainer {
+    display: none;
+}
+
+#savingThrowsContainer {
+    background-color: #cccccc;
+    grid-column: span 4/6;
+    grid-row: span 1/2;
+    margin: 1%;
+    border-radius: 1em;
+    padding: 1em;
+    text-align: left;
+}
+
+.savingThrowBox {
+    text-align: left;
+}
+
+.savingThrowCheckBox {
+    display: inline-block;
+}
+
+.savingThrowTitle {
+    display: inline-block;
+}
+
+.savingThrowBonus {
+    display: inline-block;
+}
+
+#proficiencyBonusContainer {
+    background-color: #cccccc;
+    grid-column: span 4/6;
+    margin: 1%;
+    border-radius: 1em;
+    padding: 2%;
+}
+
+#profBonus {
+    font-size: 2em;
+}
+
+#skillsListContainer {
+    background-color: #cccccc;
+    margin: 1%;
+    border-radius: 1em;
+    grid-column: span 4/6;
+    text-align: left;
+    padding: 1em;
+    font-size: 12px;
+}
+
+.skillBox {
+    display: grid;
+    text-align: left;
+}
+
+.skillCheckBox {
+    grid-column: span 1/1;
+
+}
+
+.skillTitle {
+    grid-column: span 1/2;
+    text-align: left;
+}
+
+.skillBonus {
+    grid-column: span 1/3;
+    text-align: right;
+}
+
+.passiveContainer{
+    background-color: #cccccc;
+    margin: 1%;
+    border-radius: 1em;
+}
+
+.proficiencyContainer{
+    background-color: #cccccc;
+    margin: 1%;
+    border-radius: 1em;
+    text-align: left;
+    padding: 5%;
+
+}
+
+.column2 {
+    grid-column: span 1/2;
+    border-style: solid;
+    margin: 1%;
+    display: grid;
+    border-radius: 1em;
+    width:26em;
+}
+
+.healthContainer {
+    display: grid;
+    
+}
+
+#armorClass {
+    background-color: #cccccc;
+    margin: 1%;
+    border-radius: 1em;
+    grid-column: span 2/2 ;
+    grid-row: span 1/1;
+}
+
+#acNumberBox {
+    font-size: 2em;
+}
+
+#speedNumberBox {
+    font-size: 2em;
+}
+
+#hitPointsNumberBox {
+    font-size: 2em;
+}
+#hitPointsTotalNumberBox {
+    font-size: 2em;
+}
+
+
+#tempHitPointsNumberBox {
+    font-size: 2em;
+}
+
+#hitDiceNumberBox {
+    font-size: 2em;
+}
+
+#hitDiceTotalNumberBox {
+    font-size: 2em;
+}
+
+#initiative {
+    background-color: #cccccc;
+    margin: 1%;
+    border-radius: 1em;
+    grid-column: span 2/4;
+    grid-row: span 1/1;
+}
+
+#characterInitiative {
+font-size: 2em;
+}
+
+#speed {
+    background-color: #cccccc;
+    margin: 1%;
+    border-radius: 1em;
+    grid-column: span 2/6;
+    grid-row: span 1/1 ;
+}
+#hitPoints {
+    background-color: #cccccc;
+    margin: 1%;
+    border-radius: 1em;
+    grid-column: span 6/6;
+    grid-row: span 1/2;
+}
+#tempHitPoints { 
+    background-color: #cccccc;
+    margin: 1%;
+    border-radius: 1em;
+    grid-column: span 6/6;
+    grid-row: span 1/3;
+}
+#hitDice {
+    background-color: #cccccc;
+    margin: 1%;
+    border-radius: 1em;
+    grid-column: span 3/3;
+    grid-row: span 1/4;
+}
+#deathSaves {
+    background-color: #cccccc;
+    margin: 1%;
+    border-radius: 1em;
+    grid-column: span 3/6;
+    grid-row: span 1/4;
+}
+
+.attackContainer {
+    background-color: #cccccc;
+    margin: 1%;
+    border-radius: 1em;
+}
+
+#attackListContainer {
+    display: grid;
+}
+
+#attackParent {
+grid-column: span 1/1;
+}
+
+#attackOutputParent {
+    grid-column: span 1/2;
+}
+
+#diceParent {
+    grid-column: span 1/3;
+}
+
+#damageTypeParent {
+    grid-column: span 1/4;
+}
+
+.equipmentContainer {
+    background-color: #cccccc;
+    margin: 1%;
+    border-radius: 1em;
+}
+
+.column3 {
+    grid-column: span 1/3;
+    border-style:solid;
+    margin: 1%;
+    border-radius: 1em;
+    width: 26em;
+}
+
+.featuresTraits {
+    background-color: #cccccc;
+    margin: 1%;
+    border-radius: 1em;
+    height: 98%;
+}
+
+#div1 {
+    display: inline-block;
+}
+
+#featuresColumn1 {
+    background-color: #cccccc;
+    grid-column: span 1/1;
+    border-style: solid;
+    margin: 1%;
+    border-radius: 1em;
+    width: 26em;
+    height:50em;
+}
+#featuresColumn2 {
+    background-color: #cccccc;
+    grid-column: span 1/2;
+    border-style: solid;
+    margin: 1%;
+    border-radius: 1em;
+    width: 26em;
+}
+#featuresColumn3 {
+    background-color: #cccccc;
+    grid-column: span 1/3;
+    border-style: solid;
+    margin: 1%;
+    border-radius: 1em;
+    width: 26em;
+}
+
+.featureTitle {
+    font-weight: bold;
+}
+
+.featureTrait {
+    font-size: 12px;
+}
+
+#modal2 {
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#modal2-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 1em;
+    border: 1em solid #888;
+    width: 95%;
+    height:80em;
+   display: grid;
+   border-radius: 2em;
+   grid-row: auto;
+   grid-column: auto;
+   font-family: 'Courier New', Courier, monospace;
+   text-align: center;
+   overflow: auto;
+}
+
+#spellsHeader {
+    grid-column: span 3/3;
+    grid-row: span 1/1;
+    border-style: solid;
+    display: grid;
+    grid-template-columns: 3;
+    grid-template-rows: 2;
+    border-radius: 1em;
+}
+
+#spellsClass {
+grid-column: span 3/3;
+}
+
+#spellsAbility {
+    grid-column: span 1/4;
+}
+
+#spellsDC {
+    grid-column: span 1/5;
+}
+
+#spellsBonus {
+    grid-column: span 1/6;
+}
+
+#spellsColumn1 {
+    grid-column: span 1/1;
+    grid-row: span 7/8;
+    border-style: solid;
+    margin: 1%;
+    display: grid;
+    border-radius: 1em;
+    width: 26em;
+}
+
+#spellsColumn2 {
+    grid-column: span 1/2;
+    grid-row: span 7/8;
+    border-style: solid;
+    margin: 1%;
+    display: grid;
+    border-radius: 1em;
+    width:26em;
+}
+
+#spellsColumn3 {
+    grid-column: span 1/3;
+    grid-row: span 7/8;
+    border-style: solid;
+    margin: 1%;
+    border-radius: 1em;
+    width: 26em;
+}
